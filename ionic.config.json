@@ -1,5 +1,7 @@
 {
   "name": "webmics",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

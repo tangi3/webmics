@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">webmics</string>
+    <string name="facebook_app_id">3816822011738352</string>
+    <string name="fb_login_protocol_scheme">fb3816822011738352</string>
+    <string name="title_activity_main">webmics</string>
+    <string name="package_name">io.ionic.starter</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+</resources>

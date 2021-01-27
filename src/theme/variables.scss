@@ -1,8 +1,40 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+@font-face {
+  font-family: 'sablon';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/sablon/sablon.otf');
+}
+
+@font-face {
+  font-family: 'sablon';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../assets/font/sablon/sablon.otf');
+}
+
+@font-face {
+  font-family: 'sablon';
+  font-style: normal;
+  font-weight: italic;
+  src: url('../assets/font/sablon/sablon.otf');
+}
+
+@font-face {
+  font-family: 'sablon';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../assets/font/sablon/sablon.otf');
+}
+
 /** Ionic CSS Variables **/
 :root {
+  /** custom variables **/
+  --ion-font-family: 'sablon';
+  --ion-background-color:#ffffff;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
