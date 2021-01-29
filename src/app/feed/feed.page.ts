@@ -20,16 +20,11 @@ export class FeedPage {
       if (params && params.userinfo) {
         this.logininfo = JSON.parse(params.userinfo);
       }
+      else { this.router.navigate(["/home"]); }
     });
   }
-  ionViewWillEnter() {
-    this.getUserInfo();
 
-    //Create a user based on facebookID
-    if (this.usrService.userExist(this.user.id) == false) {
-      this.usrService.createUser(this.user.id, this.user.name, this.user.email);
-    }
-  }
+  ionViewWillEnter() { this.getUserInfo(); }
 
   async signOut(): Promise<void> {
     await Plugins.FacebookLogin.logout();
@@ -40,5 +35,6 @@ export class FeedPage {
     const response = await fetch(`https://graph.facebook.com/${this.logininfo.userId}?fields=id,name,gender,link,picture&type=large&access_token=${this.logininfo.token}`);
     const myJson = await response.json();
     this.user = myJson
+    this.usrService.createFacebookUser(this.user);
   }
 }

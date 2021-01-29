@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private db: AngularFireDatabase) {}
 
-  createUser(facebookID: string, name: string, email: string){
+  private createUser(facebookID: string, name: string, email: string){
     let usr: User;
     usr.facebookID = facebookID;
     usr.name = name;
@@ -24,6 +24,11 @@ export class UserService {
       name: usr.name,
       email: usr.email
     })
+  }
+
+  //Create a user based on facebookID
+  createFacebookUser(user){
+    if (this.userExist(user.id) == false) { this.createUser(user.id, user.name, user.email); }
   }
 
   getUser(facebookID: string) {
